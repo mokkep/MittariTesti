@@ -1,0 +1,91 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+  <script>
+  var lasku = 3500/4000; <!-- 1000€ laskuja ja 4000€ sakkokatto -->
+  var mittari = 270*lasku-135;
+$(document).ready(function() { /* code here */ 
+console.log("Wassup");
+document.getElementById(".needle").style.transform = "rotate("+ mittari +"deg)"; 
+});
+  </script>
+  <style type="text/css">
+    div.fixed {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+	
+    width: 300px;
+<!--    border: 3px solid #73AD21;-->
+
+}
+.rotateimg180 {
+  -webkit-transform:rotate(10deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(135deg);
+}
+img {
+  border-radius: 0%;
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition: transform .8s ease-in-out;
+}
+      #mittari:hover{
+            border-radius: 50%;
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+           -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition: transform .8s ease-in-out;
+      }
+	 .needle {
+		width: 10px;
+		height: 130px;
+		background: #999999;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+		border-top-left-radius: 100%;
+		border-top-right-radius: 100%;
+		display: inline-block;
+		left: 197px;
+		position: absolute;
+		top: 70px;
+    transform:rotate(-135deg);
+    transform-origin:bottom;
+}
+
+</style>
+</head>
+
+<body>
+  
+
+
+  <h1>Testi1</h1>
+  <div class="fixed"> <img src="Sakkomittari_taulu_uusi.svg" alt="Middari" width="400px" height="400px">
+  <div id="logo">	<span class="speedometer"></span>
+	<span class="needle"></span>
+
+</div></div>
+ <!-- <div class="fixed"><img src="new_Mittari.png" class="rotateimg180" id="mittari" alt="Middari" width="400px" height="400px"></div>
+ --> <img src="Mittari2.png">
+  <div id="logo">	<span class="speedometer"></span>
+	<span class="needle"></span>
+
+</div>
+</body>
+
+
+</html>
